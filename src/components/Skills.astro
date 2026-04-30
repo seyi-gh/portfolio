@@ -1,0 +1,56 @@
+---
+// src/components/Skills.astro
+---
+
+<section id="skills" class="py-24 bg-surface w-full border-y border-outline/5 mt-12">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <h2 class="font-display text-3xl md:text-4xl text-gray-100 mb-16 flex items-center gap-4 font-bold tracking-tighter uppercase">
+      <span class="w-12 h-[1px] bg-primary-container/50 block"></span>
+      Arsenal Técnico
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Frontend -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-sans text-sm uppercase text-gray-400 tracking-widest border-b border-outline/10 pb-4 font-semibold">
+          Frontend & UX/UI
+        </h3>
+        <div class="flex flex-wrap gap-3 mt-2">
+          {['React', 'Astro', 'Tailwind CSS', 'Framer Motion', 'Figma'].map(tech => (
+            <div class="border border-outline/20 bg-background px-4 py-2 rounded-lg text-gray-200 hover:border-primary-container/50 transition-colors font-sans text-sm">
+              {tech}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-sans text-sm uppercase text-gray-400 tracking-widest border-b border-outline/10 pb-4 font-semibold">
+          Backend & APIs
+        </h3>
+        <div class="flex flex-wrap gap-3 mt-2">
+          {['Node.js', 'NestJS', 'TypeScript', 'REST APIs', 'PostgreSQL'].map(tech => (
+            <div class="border border-outline/20 bg-background px-4 py-2 rounded-lg text-gray-200 hover:border-primary-container/50 transition-colors font-sans text-sm">
+              {tech}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Systems & OS -->
+      <div class="flex flex-col gap-4">
+        <h3 class="font-sans text-sm uppercase text-gray-400 tracking-widest border-b border-outline/10 pb-4 font-semibold">
+          Entorno & Sistemas
+        </h3>
+        <div class="flex flex-wrap gap-3 mt-2">
+          {['Arch Linux', 'Git', 'Terminal', 'VSCode'].map(tech => (
+            <div class="border border-outline/20 bg-background px-4 py-2 rounded-lg text-gray-200 hover:border-primary-container/50 transition-colors font-sans text-sm">
+              {tech}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

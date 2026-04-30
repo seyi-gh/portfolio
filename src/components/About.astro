@@ -1,0 +1,33 @@
+---
+// src/components/About.astro
+---
+
+<section id="about" class="py-24 max-w-[1280px] mx-auto px-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="relative aspect-square md:aspect-[4/5] rounded-lg overflow-hidden border border-outline/10 bg-[#1f1f25]">
+      <!-- ? Left image -->
+      <img 
+        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" 
+        alt="Visualización abstracta de hardware y código" 
+        loading="lazy"
+        class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:opacity-100 transition-opacity duration-700" 
+      />
+    </div>
+    
+    <div class="flex flex-col gap-8 md:pl-8">
+      <h2 class="font-display text-3xl md:text-4xl text-gray-100 font-bold tracking-tighter uppercase">
+        Diseño Sistemático. <br/>
+        <span class="text-primary-container">Ejecución Impecable.</span>
+      </h2>
+      
+      <div class="flex flex-col gap-4 font-sans text-lg text-gray-400 leading-relaxed">
+        <p>
+          No solo escribo código; construyo sistemas. Mi enfoque se basa en reducir la fricción y exponer la funcionalidad pura a través de interfaces limpias, accesibles y altamente optimizadas con un fuerte enfoque en UX/UI.
+        </p>
+        <p>
+          Esa misma mentalidad de optimización y eficiencia que aplico al ensamblar y afinar hardware a medida, la traslado al desarrollo de software. Al construir arquitecturas full-stack modernas, busco siempre el máximo rendimiento, asegurando que cada componente escale de manera elegante y fluida.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

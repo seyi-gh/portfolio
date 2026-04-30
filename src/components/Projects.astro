@@ -1,0 +1,24 @@
+---
+// src/components/Projects.astro
+import { projects } from '../data/projects';
+import ProjectCard from './ProjectCard.astro';
+import FadeIn from './FadeIn.tsx';
+---
+
+<section id="work" class="py-24 max-w-[1280px] mx-auto px-8">
+  <FadeIn client:visible direction="right">
+    <h2 class="font-display text-3xl md:text-4xl text-gray-100 mb-16 flex items-center justify-end gap-4 text-right font-bold tracking-tighter uppercase">
+      Selected Works
+      <span class="w-12 h-[1px] bg-primary-container/50 block"></span>
+    </h2>
+  </FadeIn>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {projects.map((project, index) => (
+      // 0.2 times for stagger effect
+      <FadeIn client:visible direction="up" delay={index * 0.2}>
+        <ProjectCard project={project} />
+      </FadeIn>
+    ))}
+  </div>
+</section>

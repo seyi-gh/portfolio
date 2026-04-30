@@ -1,0 +1,57 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article class={`group bg-surface border border-outline/20 rounded-lg overflow-hidden hover:border-primary-container transition-colors duration-500 flex flex-col ${project.featured ? 'md:col-span-2 md:flex-row' : ''}`}>
+  
+  <div class={`relative bg-[#1f1f25] overflow-hidden ${project.featured ? 'md:w-3/5 h-64 md:h-auto' : 'h-64 border-b border-outline/10'}`}>
+    <img 
+      src={project.image} 
+      alt={project.imageAlt} 
+      loading="lazy"
+      class="w-full h-full object-cover mix-blend-luminosity group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100" 
+    />
+  </div>
+
+  <div class={`p-8 flex flex-col flex-grow ${project.featured ? 'md:w-2/5 border-t md:border-t-0 md:border-l border-outline/10 justify-center' : ''}`}>
+    <div class="flex gap-2 mb-4 flex-wrap">
+      {project.technologies.map((tech) => (
+        <span class="text-[10px] font-sans uppercase tracking-widest text-primary-container border border-primary-container/20 px-2 py-1 rounded">
+          {tech}
+        </span>
+      ))}
+    </div>
+    
+    <h3 class="font-display text-2xl text-gray-100 mb-2 font-bold tracking-tight">
+      {project.title}
+    </h3>
+    
+    <p class="font-sans text-gray-400 mb-8 leading-relaxed">
+      {project.description}
+    </p>
+    
+    <div class="flex gap-4 mt-auto">
+      {project.demoUrl && (
+        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-200 hover:text-primary-container transition-colors font-sans text-sm uppercase tracking-wider font-medium">
+          <!-- Icono de enlace externo -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Demo
+        </a>
+      )}
+      
+      {project.sourceUrl && (
+        <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-400 hover:text-gray-200 transition-colors font-sans text-sm uppercase tracking-wider font-medium">
+          <!-- Icono de código -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Source
+        </a>
+      )}
+    </div>
+  </div>
+</article>
