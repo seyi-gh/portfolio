@@ -12,34 +12,36 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "project-1",
-    title: "Variant V / Personal-Agent",
-    description: "Sistema integrado con IA que involucra reconocimiento de voz y procesamiento en segundo plano. Arquitectura orientada a la eficiencia y baja latencia.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-    imageAlt: "Código y terminal",
-    technologies: ["TypeScript", "Node.js", "AI", "Arch Linux"],
-    sourceUrl: "https://github.com/tu-usuario/variant-v",
-    featured: true 
+    id: 'project-1',
+    title: 'PulseBoard Web|API',
+    description: 'Dashboard analítico e-commerce de baja latencia. Integra un motor de agregación de datos en PostgreSQL con una interfaz reactiva, transmitiendo KPIs de negocio en tiempo real vía WebSockets y garantizando alta disponibilidad.',
+    image: '/img/PulseBoard-background.png',
+    imageAlt: 'Imagen del proyecto PulseBoard',
+    technologies: ['Vite', 'React', 'TypeScript', 'Tailwind', 'Axios', 'Recharts', 'Node.js', 'Express', 'PostgreSQL', 'WebSocket', 'Helmet'],
+    sourceUrl: 'https://github.com/seyi-gh/PulseBoard',
+    demoUrl: 'https://pulse-board-pi.vercel.app/',
+    featured: false
   },
   {
-    id: "project-2",
-    title: "SeyiWB Portfolio",
-    description: "Desarrollo de un portafolio digital personal integrando un sistema de API de usuarios personalizado para la gestión de contenido.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
-    imageAlt: "Interfaz de diseño web",
-    technologies: ["Astro", "React", "Tailwind CSS"],
-    demoUrl: "https://seyiwb.com",
-    sourceUrl: "https://github.com/tu-usuario/seyiwb",
+    id: 'project-2',
+    title: 'DocuSense Web|API',
+    description: 'Apl,icacion inteligente de alto rendimiento contruida con React 19 y Next.js. Implementa Server-Sent-Events (SSE) con gestor de archivos , autenticación JWT segura y diseñado con enfoque en la gestion de estado reactiva, con Tailwind CSS.',
+    image: '/img/DocuSense-background.png',
+    imageAlt: 'Imagen del proyecto DocuSense',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Streaming', 'Vercel', 'FastAPI', 'Python', 'PostgreSQL', 'JWT', 'AI API'],
+    sourceUrl: 'https://github.com/seyi-gh/Docusense-web',
+    demoUrl: 'https://docusense-web.vercel.app/',
     featured: false
   },
   {
     id: "project-3",
-    title: "ODS 4 Data Analysis",
-    description: "Sistema en Python para procesar datos educativos mediante la API de Open Library, generando visualizaciones estadísticas en SQLite.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-    imageAlt: "Gráficos de datos y análisis",
-    technologies: ["Python", "SQLite", "Data VIZ", "REST API"],
-    sourceUrl: "https://github.com/tu-usuario/ods4-analysis",
+    title: 'LoanFlow Web|API',
+    description: 'Plataforma de gestión de créditos con control de acceso basado en roles (RBAC). Frontend desarrollado en Next.js y TypeScript para el procesamiento de solicitudes financieras. Integra flujos completos de evaluacion, gestion de documentos y autenticacion.',
+    image: '/img/LoanFlow-background.png',
+    imageAlt: 'Imagen del prooyecto LoanFlow',
+    technologies: ['Vercel', 'Next.js', 'React', 'TypeScript', 'Tailwind', 'Axios', 'ESLint', 'Spring Boot', 'Java', 'PostgreSQL', 'JWT', 'AI API'],
+    sourceUrl: 'https://github.com/seyi-gh/LoanFlow-Frontend',
+    demoUrl: 'https://loanflowfront.vercel.app/',
     featured: false
   }
 ];
